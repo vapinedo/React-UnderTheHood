@@ -19,11 +19,17 @@ function App() {
 }
 
 function Counter({ name }) {
+
+    const clickHandler = (event) => {
+        console.log("React handled click event");
+        console.log(event);
+    };
+    
     return (
         <article>
             <h2>Counter {name}</h2>
             <p>You clicked 1 times</p>
-            <button className="button">Click me</button>
+            <button className="button" onClick={clickHandler}>Click me</button>
         </article>
     );
 }
